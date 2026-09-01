@@ -1,3 +1,8 @@
+// Force scroll to top on page load
+window.addEventListener('load', () => {
+  window.scrollTo(0, 0);
+});
+
 // Mobile nav toggle
 const navToggle = document.getElementById('navToggle');
 const nav = document.getElementById('nav');
