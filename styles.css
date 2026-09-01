@@ -40,7 +40,7 @@ a { color: inherit; text-decoration: none; }
   padding: 1.1rem 0;
 }
 .logo {
-  font-family: var(--serif); font-size: 1.5rem; font-weight: 500;
+  font-family: var(--serif); font-size: 1.3rem; font-weight: 500;
   letter-spacing: 0.02em; display: flex; flex-direction: column; line-height: 1.1;
 }
 .logo span { color: var(--accent); font-style: italic; }
@@ -74,34 +74,24 @@ a { color: inherit; text-decoration: none; }
 /* ===== Hero ===== */
 .hero {
   position: relative; min-height: 100vh; display: flex; align-items: center;
-  background: url('https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=2000&q=80') center/cover;
+  background: var(--bg);
+  color: var(--ink);
 }
-.hero-overlay {
-  position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.55) 100%);
-}
-.hero-content {
-  position: relative; width: min(1200px, 90%); margin: 0 auto; color: #fff;
-}
+.hero-overlay { display: none; }
+.hero-content { position: relative; width: min(1200px, 90%); margin: 0 auto; max-width: 760px; }
 .hero-eyebrow {
   font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.22em;
-  margin-bottom: 1.5rem; opacity: 0.9;
+  margin-bottom: 1.5rem; color: var(--ink-soft);
 }
-.hero h1 {
-  font-family: var(--serif); font-size: clamp(3rem, 8vw, 6rem);
-  font-weight: 500; line-height: 1.05; margin-bottom: 1.5rem;
-}
+.hero h1 { font-size: clamp(3.2rem, 8vw, 6rem); margin-bottom: 1.5rem; }
 .hero h1 em { font-style: italic; color: #d9c9a8; }
-.hero-sub {
-  font-size: 1.15rem; max-width: 520px; opacity: 0.92; font-weight: 300;
-  margin-bottom: 2.5rem;
-}
+.hero-sub { font-size: 1.15rem; max-width: 520px; color: var(--ink-soft); font-weight: 300; margin-bottom: 2.5rem; }
 .btn-line {
-  display: inline-block; font-size: 0.82rem; text-transform: uppercase;
-  letter-spacing: 0.14em; padding-bottom: 4px; border-bottom: 1px solid rgba(255,255,255,0.6);
-  color: #fff; transition: border-color .2s ease;
+  display: inline-block; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.14em;
+  padding-bottom: 4px; border-bottom: 1px solid var(--line);
+  color: var(--ink-soft); transition: border-color .2s ease, color .2s ease;
 }
-.btn-line:hover { border-color: #fff; }
+.btn-line:hover { border-color: var(--ink); color: var(--ink); }
 
 /* ===== Statement ===== */
 .statement { padding: 6rem 0; }
