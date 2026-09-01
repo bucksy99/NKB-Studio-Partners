@@ -4,7 +4,7 @@
   --ink: #1a1a1a;
   --ink-soft: #4a4a4a;
   --line: #d9d4cc;
-  --accent: #8a6d3b;
+  --accent: #68522c;
   --serif: "Cormorant Garamond", Georgia, serif;
   --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
@@ -55,7 +55,7 @@ h3 { font-size: 1.4rem; }
 .logo span { color: var(--accent); font-style: italic; }
 .logo .logo-sub {
   font-family: var(--sans); font-size: 0.62rem; font-style: normal; font-weight: 400;
-  text-transform: uppercase; letter-spacing: 0.18em; color: #d9c9a8;
+  text-transform: uppercase; letter-spacing: 0.18em; color: #a3977e;
   margin-top: 2px;
 }
 
@@ -100,7 +100,7 @@ h3 { font-size: 1.4rem; }
   margin-bottom: 1.5rem; color: var(--ink-soft);
 }
 .hero h1 { font-size: clamp(3.2rem, 8vw, 6rem); margin-bottom: 1.5rem; }
-.hero h1 em { font-style: italic; color: #d9c9a8; }
+.hero h1 em { font-style: italic; color: #a3977e; }
 .hero-sub { font-size: 1.15rem; max-width: 520px; color: var(--ink-soft); font-weight: 300; margin-bottom: 2.5rem; }
 .btn-line {
   display: inline-block; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.14em;
@@ -206,7 +206,7 @@ h3 { font-size: 1.4rem; }
   font-family: var(--sans); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.14em;
   padding: 1rem 2.4rem; cursor: pointer; transition: background .2s ease;
 }
-.btn-solid:hover { background: #6f5630; }
+.btn-solid:hover { background: #4e3d20; }
 
 .form-note { margin-top: 1rem; color: var(--accent); font-size: 0.95rem; }
 
@@ -221,7 +221,7 @@ h3 { font-size: 1.4rem; }
 .footer-logo span { color: var(--accent); font-style: italic; }
 .footer-logo .footer-sub {
   font-family: var(--sans); font-size: 0.58rem; font-style: normal; font-weight: 400;
-  text-transform: uppercase; letter-spacing: 0.18em; color: #d9c9a8;
+  text-transform: uppercase; letter-spacing: 0.18em; color: #a3977e;
   margin-top: 2px;
 }
 .footer-copy { font-size: 0.85rem; }
