@@ -1,8 +1,13 @@
 // Force scroll to top on page load — but only if there's no hash (so anchor links work)
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
 if (!window.location.hash) {
   window.addEventListener('load', () => {
     window.scrollTo(0, 0);
   });
+  // Also scroll immediately before load fires
+  window.scrollTo(0, 0);
 }
 
 // Mobile nav toggle
