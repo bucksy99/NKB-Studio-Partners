@@ -1,13 +1,12 @@
-// Force scroll to top on page load — but only if there's no hash (so anchor links work)
+// Prevent browser from restoring previous scroll position
 if ('scrollRestoration' in history) {
   history.scrollRestoration = 'manual';
 }
+// Scroll to top on fresh page load (no hash = not coming from a nav link)
 if (!window.location.hash) {
-  window.addEventListener('load', () => {
-    window.scrollTo(0, 0);
+  window.addEventListener('DOMContentLoaded', () => {
+    requestAnimationFrame(() => window.scrollTo(0, 0));
   });
-  // Also scroll immediately before load fires
-  window.scrollTo(0, 0);
 }
 
 // Mobile nav toggle
@@ -49,8 +48,8 @@ if (form) {
       }
     } catch (err) {
       formNote.hidden = false;
-      formNote.textContent = "Sorry, something went wrong. Please email us directly.";
-      setTimeout(() => { formNote.hidden = true; }, 5000);
+        formNote.textContent = "Sorry, something went wrong. Please email us directly.";
+        setTimeout(() => { formNote.hidden = true; }, 5000);
     }
   });
 }
