@@ -5,7 +5,8 @@ if ('scrollRestoration' in history) {
 // Scroll to top on fresh page load (no hash = not coming from a nav link)
 if (!window.location.hash) {
   window.addEventListener('DOMContentLoaded', () => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
   });
 }
 
