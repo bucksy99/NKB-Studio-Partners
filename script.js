@@ -41,20 +41,20 @@ if (form) {
         body: formData
       });
       const data = await response.json();
-      if (response.ok && data.success === 'true') {
+      if (response.ok) {
         form.reset();
         formNote.hidden = false;
         formNote.textContent = "Thanks — we'll be in touch within a few days.";
         setTimeout(() => { formNote.hidden = true; }, 5000);
       } else {
         formNote.hidden = false;
-        formNote.textContent = "Sorry, something went wrong. Please email us directly.";
-        setTimeout(() => { formNote.hidden = true; }, 5000);
+        formNote.textContent = "Sorry, something went wrong. Please email us directly at nkbuchholtz@gmail.com";
+        setTimeout(() => { formNote.hidden = true; }, 8000);
       }
     } catch (err) {
       formNote.hidden = false;
-      formNote.textContent = "Sorry, something went wrong. Please email us directly.";
-      setTimeout(() => { formNote.hidden = true; }, 5000);
+      formNote.textContent = "Sorry, something went wrong. Please email us directly at nkbuchholtz@gmail.com";
+      setTimeout(() => { formNote.hidden = true; }, 8000);
     }
     submitBtn.disabled = false;
     submitBtn.textContent = 'Send enquiry';
