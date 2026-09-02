@@ -5,7 +5,7 @@ if ('scrollRestoration' in history) {
 // Scroll to top on fresh page load (no hash = not coming from a nav link)
 if (!window.location.hash) {
   window.addEventListener('DOMContentLoaded', () => {
-    requestAnimationFrame(() => window.scrollTo(0, 0));
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
   });
 }
 
@@ -48,8 +48,8 @@ if (form) {
       }
     } catch (err) {
       formNote.hidden = false;
-        formNote.textContent = "Sorry, something went wrong. Please email us directly.";
-        setTimeout(() => { formNote.hidden = true; }, 5000);
+      formNote.textContent = "Sorry, something went wrong. Please email us directly.";
+      setTimeout(() => { formNote.hidden = true; }, 5000);
     }
   });
 }
